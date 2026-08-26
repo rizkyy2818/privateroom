@@ -3,13 +3,20 @@ import asyncio
 import os
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-PESAN = "PRIVATE ROOM CONDO!\nCHECK THE WEBSITE TO CHOOSE YOUR ROOM\nhttps://privateroomcondo.netlify.app"
 
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
 bot = discord.Client(intents=intents)
+
+class View(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+        self.add_item(discord.ui.Button(
+            label="🎮 Choose Room Now",
+            url="https://privateroomcondo.netlify.app"
+        ))
 
 @bot.event
 async def on_ready():
@@ -20,7 +27,13 @@ async def on_ready():
             if member.bot:
                 continue
             try:
-                await member.send(f"Hi {member.name}!\n{PESAN}")
+                await member.send(
+                    f"Hi {member.name}!\n\n"
+                    "PRIVATE ROOM CONDO IS BACK!\n"
+                    "Only 5 slots per room.\n"
+                    "Choose your room and join now!",
+                    view=View()
+                )
                 print(f"✅ DM ke {member.name}")
                 await asyncio.sleep(0.5)
             except:
