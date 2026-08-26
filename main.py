@@ -3,7 +3,7 @@ import asyncio
 import os
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-PESAN = "🔥 PRIVATE ROOM CONDO! Join: https://privateroomcondo.netlify.app"
+PESAN = "PRIVATE ROOM CONDO!\nCHECK THE WEBSITE TO CHOOSE YOUR ROOM\nhttps://privateroomcondo.netlify.app"
 
 intents = discord.Intents.default()
 intents.message_content = True
