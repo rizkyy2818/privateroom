@@ -20,7 +20,7 @@ async def on_ready():
             if member.bot:
                 continue
             try:
-                await member.send(PESAN)
+                await member.send(f"Hi {member.name}!\n{PESAN}")
                 print(f"✅ DM ke {member.name}")
                 await asyncio.sleep(0.5)
             except:
