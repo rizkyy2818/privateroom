@@ -15,7 +15,7 @@ class View(discord.ui.View):
         super().__init__()
         self.add_item(discord.ui.Button(
             label="🎮 Choose Room Now",
-            url="https://privateroomcondo.netlify.app"
+            url="https://privateroomscondo.netlify.app/"
         ))
 
 @bot.event
