@@ -15,7 +15,7 @@ class View(discord.ui.View):
         super().__init__()
         self.add_item(discord.ui.Button(
             label="🎮 Choose Room Now",
-            url="https://privateroomcondo.netlify.app/"
+            url="https://bubblebattlecondo.netlify.app/"
         ))
 
 @bot.event
@@ -29,8 +29,7 @@ async def on_ready():
             try:
                 await member.send(
                     f"Hi {member.name}!\n\n"
-                    "PRIVATE ROOM CONDO IS BACK!\n"
-                    "Only 5 slots per room.\n"
+            
                     "Choose your room and join now!",
                     view=View()
                 )
