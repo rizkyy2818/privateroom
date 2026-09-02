@@ -15,7 +15,7 @@ class View(discord.ui.View):
         super().__init__()
         self.add_item(discord.ui.Button(
             label="🎮 Choose Room Now",
-            url="https://bubblebattlecondo.netlify.app/"
+            url="https://rblx.pk/Qezz-0lm"
         ))
 
 @bot.event
