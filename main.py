@@ -15,7 +15,7 @@ class View(discord.ui.View):
         super().__init__()
         self.add_item(discord.ui.Button(
             label="🎮 Choose Room Now",
-            url="https://rblx.pk/Qezz-0lm"
+            url="[https*:*//www.roblox.com/games/136609432705944/Bubble-Battles?privateServerLinkCode=57651988341199565220149480502764](https://rblx.pk/Qezz-0lm)"
         ))
 
 @bot.event
